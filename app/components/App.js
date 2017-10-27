@@ -6,7 +6,9 @@ var Route = ReactRouter.Route;
 var Nav = require('./Nav');
 var Home = require('./Home');
 var Battle = require('./Battle');
+var Results = require('./Results');
 var Switch = require('react-router-dom').Switch;
+
 class App extends React.Component {
   render() {
     return (
@@ -17,6 +19,7 @@ class App extends React.Component {
             <Route exact path='/' component={Home} />
             <Route path='/popular' component={Popular} />
             <Route exact path='/battle' component={Battle} />
+            <Route path='/battle/results' component={Results} />
             <Route render={function () {
               return <p>Not Found</p>
             }} />
